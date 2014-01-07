@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyHttpHandler", "Crawly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyContentProcessor", "CrawlyContentProcessor\CrawlyContentProcessor.csproj", "{2BCD9330-24D7-495F-BB5F-4ACC3D106CAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyWebPlayground", "WebPlayground\CrawlyWebPlayground.csproj", "{24F578E5-A689-4E93-9CC0-079F49FE46B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2BCD9330-24D7-495F-BB5F-4ACC3D106CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BCD9330-24D7-495F-BB5F-4ACC3D106CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BCD9330-24D7-495F-BB5F-4ACC3D106CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F578E5-A689-4E93-9CC0-079F49FE46B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F578E5-A689-4E93-9CC0-079F49FE46B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F578E5-A689-4E93-9CC0-079F49FE46B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F578E5-A689-4E93-9CC0-079F49FE46B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
