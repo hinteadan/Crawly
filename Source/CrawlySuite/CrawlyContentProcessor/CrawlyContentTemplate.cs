@@ -12,7 +12,14 @@ namespace H.Crawly.Content
         protected virtual string RawTemplateContent { get; set; }
         protected Dictionary<string, string> Parameters { get { return parameters; } }
 
-        public string Result()
+        public CrawlyContentTemplate Having(string parameter, string value)
+        {
+            parameters[parameter] = value;
+
+            return this;
+        }
+
+        public virtual string Result()
         {
             string templateContent = RawTemplateContent;
             string resultContent = string.Empty;
@@ -54,15 +61,6 @@ namespace H.Crawly.Content
             } while (paramPosition >= 0);
 
             return resultContent;
-        }
-    }
-
-    public class TestContentTemplate : CrawlyContentTemplate
-    {
-        public TestContentTemplate(string content)
-        {
-            base.RawTemplateContent = content;
-            base.Parameters.Add("test", "THIS_IS_THE_REPLACEMENT");
         }
     }
 }

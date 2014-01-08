@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="CrawlyContentProcessor.cs" />
     <Compile Include="CrawlyContentTemplate.cs" />
+    <Compile Include="CrawlyFileTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
