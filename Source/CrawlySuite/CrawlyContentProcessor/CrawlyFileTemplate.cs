@@ -5,16 +5,27 @@ namespace H.Crawly.Content
     public class CrawlyFileTemplate : CrawlyContentTemplate
     {
         private readonly string filePath;
+        private string fileContent;
 
         public CrawlyFileTemplate(string filePath)
         {
             this.filePath = filePath;
         }
 
-        public override string Result()
+        protected override string RawTemplateContent
         {
-            base.RawTemplateContent = File.ReadAllText(filePath);
-            return base.Result();
+            get
+            {
+                if (fileContent == null)
+                {
+                    fileContent = File.ReadAllText(filePath);
+                }
+                return fileContent;
+            }
+            set
+            {
+                fileContent = value;
+            }
         }
     }
 }

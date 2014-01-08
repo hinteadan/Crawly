@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace H.Crawly.Content
 {
-    public abstract class CrawlyContentTemplate
+    public class CrawlyContentTemplate
     {
         private const char parameterMark = '@';
         private static readonly char[] parameterEndMarks = new char[] { ' ', '.', '!', '?', '&', '<', '>', '|', '/', '\\', ':', ';', '"', '\'' };
