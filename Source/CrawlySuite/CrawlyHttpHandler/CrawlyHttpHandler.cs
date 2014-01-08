@@ -26,7 +26,7 @@ namespace H.Crawly
             if (IsCrawlRequest(context))
             {
                 context.Response.ClearContent();
-                context.Response.Write(this.Populate(new CrawlyContentProcessor(context.Request.Url)).GetContent());
+                context.Response.Write(this.Populate(new CrawlyContentProcessor(context.Request.Url, context.Server.MapPath(""))).GetContent());
                 context.Response.Flush();
                 return;
             }

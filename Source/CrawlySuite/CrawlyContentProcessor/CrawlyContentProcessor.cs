@@ -9,13 +9,13 @@ namespace H.Crawly.Content
         private readonly string templatesDir = string.Empty;
         private readonly CrawlyContentTemplate template;
 
-        public CrawlyContentProcessor(string localPath)
+        public CrawlyContentProcessor(string localPath, string templatesDir)
         {
-            this.templatesDir = ConfigurationManager.AppSettings["Crawly.TemplatesDir"] != null ?
-                ConfigurationManager.AppSettings["Crawly.TemplatesDir"] :
-                this.templatesDir;
-            this.template = new CrawlyFileTemplate(string.Format("{0}{1}{2}", templatesDir, localPath, defaultTemplateFileExtension));
+            this.templatesDir = templatesDir == null ? this.templatesDir : templatesDir;
+            this.template = new CrawlyFileTemplate(string.Format("{0}{1}{2}", templatesDir, localPath.Substring(localPath.LastIndexOfAny(new char[] { '/', '\\' })), defaultTemplateFileExtension));
         }
+        public CrawlyContentProcessor(string localPath) : this(localPath, ConfigurationManager.AppSettings["Crawly.TemplatesDir"]) { }
+        public CrawlyContentProcessor(Uri requestUrl, string templatesDir) : this(requestUrl.LocalPath, templatesDir) { }
         public CrawlyContentProcessor(Uri requestUrl) : this(requestUrl.LocalPath) { }
 
         public CrawlyContentProcessor Populate(string paramName, string with)
@@ -31,7 +31,7 @@ namespace H.Crawly.Content
 
         public string GetContent()
         {
-            throw new NotImplementedException();
+            return template.Result();
         }
     }
 }
