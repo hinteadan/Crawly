@@ -8,9 +8,12 @@ namespace H.Crawly.Web.Playground
 {
     public class CustomTemplateDataSource : IPopulateCrawlyTemplate
     {
-        public Dictionary<string, string> With()
+        public Dictionary<string, string> WithThese()
         {
-            throw new NotImplementedException();
+            return new Dictionary<string, string> { 
+                { "title", "Custom title from CustomTemplateDataSource" },
+                { "content", "Custom content from CustomTemplateDataSource" }
+            };
         }
     }
 }

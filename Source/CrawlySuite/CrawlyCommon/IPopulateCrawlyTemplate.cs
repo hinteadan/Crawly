@@ -8,6 +8,6 @@ namespace H.Crawly.Common
 {
     public interface IPopulateCrawlyTemplate
     {
-        Dictionary<string, string> With();
+        Dictionary<string, string> WithThese();
     }
 }
