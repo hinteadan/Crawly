@@ -108,3 +108,4 @@ Backup*/
 UpgradeLog*.XML
 
 NuGet.Package/lib/*
+*.nupkg
