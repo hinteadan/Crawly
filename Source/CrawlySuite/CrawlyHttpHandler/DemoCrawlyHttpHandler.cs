@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using System.Web;
 
 namespace H.Crawly
@@ -14,7 +9,8 @@ namespace H.Crawly
         {
             processor
                 .Populate("title", "DemoCrawlyHttpHandler")
-                .Populate("content", () => {
+                .Populate("content", () =>
+                {
                     return HttpUtility.HtmlEncode(new WebClient().DownloadString("http://www.amairamas.ro"));
                 });
 

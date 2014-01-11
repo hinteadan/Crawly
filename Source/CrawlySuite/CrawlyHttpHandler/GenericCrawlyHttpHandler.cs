@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using H.Crawly.Common;
+﻿using H.Crawly.Common;
 using H.Crawly.Content;
 
 namespace H.Crawly
@@ -14,7 +9,7 @@ namespace H.Crawly
 
         public override CrawlyContentProcessor Populate(CrawlyContentProcessor processor)
         {
-            foreach(var p in populateTemplate.WithThese())
+            foreach (var p in populateTemplate.WithThese())
             {
                 processor.Populate(p.Key, p.Value);
             }
