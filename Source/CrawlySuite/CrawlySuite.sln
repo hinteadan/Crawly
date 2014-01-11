@@ -16,6 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyConsolePlayground", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyCommon", "CrawlyCommon\CrawlyCommon.csproj", "{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet.Package", "NuGet.Package", "{C3C8BAF8-687C-4BAE-96CC-4174C204AACA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\NuGet.Package\Package.nuspec = ..\..\NuGet.Package\Package.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
