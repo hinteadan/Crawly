@@ -6,7 +6,7 @@ namespace H.Crawly.Content
     public class CrawlyContentTemplate
     {
         private const char parameterMark = '@';
-        private static readonly char[] parameterEndMarks = new char[] { ' ', '.', '!', '?', '&', '<', '>', '|', '/', '\\', ':', ';', '"', '\'' };
+        private static readonly char[] parameterEndMarks = new char[] { ' ', '.', '!', '?', '&', '<', '>', '|', '/', '\\', ':', ';', '"', '\'', '\r', '\n' };
         private readonly Dictionary<string, string> parameters = new Dictionary<string, string>();
 
         protected virtual string RawTemplateContent { get; set; }
