@@ -3,14 +3,14 @@
   <metadata>
     <id>H.CrawlySuite</id>
     <title>H's Crawly Suite</title>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Hintea Dan Alexandru</authors>
     <owners>Hintea Dan Alexandru</owners>
     <projectUrl>https://github.com/hinteadan/Crawly</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A utility library for helping create SEO-indexable content for AJAX-based web apps. Implementation based on Google's AJAX crawling specs.</description>
     <summary>A utility library for creating SEO-indexable content for AJAX-based web apps.</summary>
-    <releaseNotes>First release of the package.</releaseNotes>
+    <releaseNotes>Pass on the query string parameters.</releaseNotes>
     <copyright>Copyright 2014. All rights reserved to the author(s).</copyright>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
