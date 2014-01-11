@@ -4,12 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyHttpHandler", "CrawlyHttpHandler\CrawlyHttpHandler.csproj", "{EA78193E-9019-4663-AF50-A9A75B68EA0A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518} = {5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyContentProcessor", "CrawlyContentProcessor\CrawlyContentProcessor.csproj", "{2BCD9330-24D7-495F-BB5F-4ACC3D106CAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyWebPlayground", "WebPlayground\CrawlyWebPlayground.csproj", "{24F578E5-A689-4E93-9CC0-079F49FE46B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyConsolePlayground", "CrawlyConsolePlayground\CrawlyConsolePlayground.csproj", "{C8162F14-FB5C-47F5-A826-A562208FB59E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlyCommon", "CrawlyCommon\CrawlyCommon.csproj", "{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{C8162F14-FB5C-47F5-A826-A562208FB59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8162F14-FB5C-47F5-A826-A562208FB59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8162F14-FB5C-47F5-A826-A562208FB59E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

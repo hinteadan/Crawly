@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="custom.html.crawlable" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,14 +66,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="custom.html" />
     <Content Include="index.html.crawlable" />
     <Content Include="index.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomTemplateDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrawlyCommon\CrawlyCommon.csproj">
+      <Project>{5be5bdc7-4e28-4594-a2c9-d92c9fbde518}</Project>
+      <Name>CrawlyCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CrawlyHttpHandler\CrawlyHttpHandler.csproj">
       <Project>{ea78193e-9019-4663-af50-a9a75b68ea0a}</Project>
       <Name>CrawlyHttpHandler</Name>

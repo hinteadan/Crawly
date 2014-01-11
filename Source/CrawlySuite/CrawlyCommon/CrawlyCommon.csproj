@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EA78193E-9019-4663-AF50-A9A75B68EA0A}</ProjectGuid>
+    <ProjectGuid>{5BE5BDC7-4E28-4594-A2C9-D92C9FBDE518}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>H.Crawly</RootNamespace>
-    <AssemblyName>CrawlyHttpHandler</AssemblyName>
+    <RootNamespace>H.Crawly.Common</RootNamespace>
+    <AssemblyName>CrawlyCommon</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,20 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrawlyHttpHandler.cs" />
-    <Compile Include="GenericCrawlyHttpHandler.cs" />
+    <Compile Include="IPopulateCrawlyTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DemoCrawlyHttpHandler.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CrawlyCommon\CrawlyCommon.csproj">
-      <Project>{5be5bdc7-4e28-4594-a2c9-d92c9fbde518}</Project>
-      <Name>CrawlyCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CrawlyContentProcessor\CrawlyContentProcessor.csproj">
-      <Project>{2bcd9330-24d7-495f-bb5f-4acc3d106cae}</Project>
-      <Name>CrawlyContentProcessor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
