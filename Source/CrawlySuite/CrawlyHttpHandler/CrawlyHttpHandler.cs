@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Specialized;
+using System.Linq;
 using System.Web;
 using H.Crawly.Content;
 
@@ -16,9 +17,14 @@ namespace H.Crawly
             }
         }
 
-        public virtual CrawlyContentProcessor Populate(CrawlyContentProcessor processor)
+        public virtual CrawlyContentProcessor Populate(CrawlyContentProcessor processor, NameValueCollection queryString)
         {
             return processor;
+        }
+
+        public virtual CrawlyContentProcessor Populate(CrawlyContentProcessor processor)
+        {
+            return Populate(processor);
         }
 
         public void ProcessRequest(HttpContext context)
@@ -26,7 +32,7 @@ namespace H.Crawly
             if (IsCrawlRequest(context))
             {
                 context.Response.ClearContent();
-                context.Response.Write(this.Populate(new CrawlyContentProcessor(context.Request.Url, context.Server.MapPath(""))).GetContent());
+                context.Response.Write(this.Populate(new CrawlyContentProcessor(context.Request.Url, context.Server.MapPath("")), context.Request.QueryString).GetContent());
                 context.Response.Flush();
                 return;
             }

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using H.Crawly.Common;
 
 namespace H.Crawly.Web.Playground
@@ -14,6 +12,11 @@ namespace H.Crawly.Web.Playground
                 { "title", "Custom title from CustomTemplateDataSource" },
                 { "content", "Custom content from CustomTemplateDataSource" }
             };
+        }
+
+        public IPopulateCrawlyTemplate For(NameValueCollection queryString)
+        {
+            return this;
         }
     }
 }
