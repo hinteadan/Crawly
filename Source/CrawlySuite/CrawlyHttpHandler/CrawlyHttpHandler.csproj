@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CrawlyHttpHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DemoCrawlyHttpHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrawlyContentProcessor\CrawlyContentProcessor.csproj">
